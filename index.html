@@ -11,11 +11,17 @@
       html2canvas(document.body, {
         onrendered: function(canvas) {
           //document.body.appendChild(canvas);
-          var dataURL = canvas.toDataURL('image/png');
-          document.getElementById('screenshotImg').src = dataURL;
+          //var dataURL = canvas.toDataURL('image/png');
+          //document.getElementById('screenshotImg').src = dataURL;
+          window.myCanvas = canvas;
         },
         allowTaint: true,
       });
+    }
+    
+    function downloadImage() {
+      var dataURL = window.myCanvas.toDataURL('img/png');
+      document.getElementById('screenshotImg').src = dataURL;
     }
     </script>
   </head>
