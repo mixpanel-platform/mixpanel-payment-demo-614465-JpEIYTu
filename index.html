@@ -13,7 +13,8 @@
           //document.body.appendChild(canvas);
           var dataURL = canvas.toDataURL('image/png');
           document.getElementById('screenshotImg').src = dataURL;
-        }
+        },
+        allowTaint: 'true'
       });
     }
     </script>
