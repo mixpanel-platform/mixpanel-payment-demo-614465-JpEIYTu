@@ -10,12 +10,11 @@
     function takeScreenshot() {
       html2canvas(document.body, {
         onrendered: function(canvas) {
-          document.body.appendChild(canvas);
-          //var dataURL = canvas.toDataURL('image/png');
-          //document.getElementById('screenshotImg').src = dataURL;
+          //document.body.appendChild(canvas);
+          var dataURL = canvas.toDataURL('image/png');
+          document.getElementById('screenshotImg').src = dataURL;
         },
         allowTaint: true,
-        logging: true
       });
     }
     </script>
