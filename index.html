@@ -10,7 +10,9 @@
     function takeScreenshot() {
       html2canvas(document.body, {
         onrendered: function(canvas) {
-          document.body.appendChild(canvas);
+          //document.body.appendChild(canvas);
+          var dataURL = canvas.toDataURL('image/png');
+          document.getElementById('screenshotImg').src = dataURL;
         }
       });
     }
