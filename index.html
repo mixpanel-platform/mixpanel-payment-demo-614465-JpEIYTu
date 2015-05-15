@@ -10,7 +10,7 @@
     function takeScreenshot() {
       html2canvas(eventGraph, {
         onrendered: function(canvas) {
-          document.body.appendChild(canvas);
+          //document.body.appendChild(canvas);
           //var dataURL = canvas.toDataURL('image/png');
           //document.getElementById('screenshotImg').src = dataURL;
           window.myCanvas = canvas;
